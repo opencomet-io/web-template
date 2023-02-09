@@ -1,0 +1,17 @@
+name: opencomet-landing
+
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: on-failure
+    networks:
+      - caddy
+    labels:
+      caddy: opencomet.io
+      caddy.reverse_proxy: "{{upstreams 3001}}"
+
+networks:
+  caddy:
+    external: true
