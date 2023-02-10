@@ -1,0 +1,28 @@
+const breakpoints = {
+  xs: 320,
+  s: 414,
+  m: 768,
+  l: 1024,
+  xl: 1280,
+  xxl: 1440,
+  max: 1680,
+};
+
+const customMediaQuery = (minWidth: number) =>
+  `@media screen and (min-width: ${minWidth}px)`;
+
+const media = {
+  xs: customMediaQuery(breakpoints.xs),
+  s: customMediaQuery(breakpoints.s),
+  m: customMediaQuery(breakpoints.m),
+  l: customMediaQuery(breakpoints.l),
+  xl: customMediaQuery(breakpoints.xl),
+  xxl: customMediaQuery(breakpoints.xxl),
+  max: customMediaQuery(breakpoints.max),
+  canHover: `@media (hover: hover) and (pointer: fine)`,
+  reducedMotion: `@media (prefers-reduced-motion: reduce)`,
+  fullMotion: `@media (prefers-reduced-motion: no-preference)`,
+};
+
+export { breakpoints };
+export default media;
