@@ -298,6 +298,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/hooks@npm:^5.10.3":
+  version: 5.10.3
+  resolution: "@mantine/hooks@npm:5.10.3"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 629554658e910dec1c14ecbdaf8e48c1ce2af022044269e73ff069d719a4f9b68428bb75ade5108ace40bd29253658e663c594a237e080226de28705c10c871e
+  languageName: node
+  linkType: hard
+
 "@motionone/animation@npm:^10.15.1":
   version: 10.15.1
   resolution: "@motionone/animation@npm:10.15.1"
@@ -2346,6 +2355,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immer@npm:^9.0.19":
+  version: 9.0.19
+  resolution: "immer@npm:9.0.19"
+  checksum: f02ee53989989c287cd548a3d817fccf0bfe56db919755ee94a72ea3ae78a00363fba93ee6c010fe54a664380c29c53d44ed4091c6a86cae60957ad2cfabc010
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^3.0.0, import-fresh@npm:^3.2.1":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
@@ -2746,6 +2762,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "landing@workspace:."
   dependencies:
+    "@mantine/hooks": ^5.10.3
     "@next/font": 13.1.6
     "@types/node": 18.13.0
     "@types/prettier": ^2
@@ -2758,6 +2775,7 @@ __metadata:
     eslint-config-prettier: ^8.6.0
     eslint-plugin-prettier: ^4.2.1
     framer-motion: ^9.0.2
+    immer: ^9.0.19
     next: 13.1.6
     prettier: ^2.8.4
     react: 18.2.0
@@ -2766,6 +2784,7 @@ __metadata:
     sharp: ^0.31.3
     styled-components: ^5.3.6
     typescript: 4.9.5
+    zustand: ^4.3.3
   languageName: unknown
   linkType: soft
 
@@ -4276,6 +4295,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -4367,5 +4395,22 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "zustand@npm:4.3.3"
+  dependencies:
+    use-sync-external-store: 1.2.0
+  peerDependencies:
+    immer: ">=9.0"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: fe0277ab0ce14849dea254cbdcfe83d4614364d38e616875f75ef2419f29085f5b03605efabeb33189a4557e647efaa294e0984c4f642e0566f445a7b207cdd6
   languageName: node
   linkType: hard

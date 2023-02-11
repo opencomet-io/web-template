@@ -6,7 +6,7 @@ const Landing: FC = () => {
   return (
     <>
       <EnhancedHead title="Landing" description="Landing page" />
-      <h1>OpenComet</h1>
+      <h1>Landing</h1>
     </>
   );
 };
