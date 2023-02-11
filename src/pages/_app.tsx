@@ -12,6 +12,8 @@ const CustomApp: FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="same-origin" />
+        <meta name="robots" content="all" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>
