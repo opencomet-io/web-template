@@ -11,6 +11,7 @@ const nextConfig = {
     styledComponents: true,
   },
   i18n,
+  poweredByHeader: false,
 };
 
 module.exports = nextConfig;

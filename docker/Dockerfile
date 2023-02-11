@@ -7,8 +7,10 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json yarn.lock* ./
+COPY .yarnrc.docker.yml ./.yarnrc.yml
+COPY .yarn/releases ./.yarn/releases
 
-RUN yarn --frozen-lockfile
+RUN yarn install --immutable
 
 # Builder
 FROM base AS builder
@@ -16,6 +18,7 @@ FROM base AS builder
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/.yarn/cache ./.yarn/cache
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1

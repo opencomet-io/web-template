@@ -1,4 +1,4 @@
-name: opencomet-landing
+name: frontend
 
 services:
   frontend:
@@ -9,7 +9,7 @@ services:
     networks:
       - caddy
     labels:
-      caddy: opencomet.io
+      caddy: localhost
       caddy.reverse_proxy: '{{upstreams 3001}}'
 
 networks:
