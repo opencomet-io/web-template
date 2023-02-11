@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalHead from 'utils/meta/GlobalHead';
@@ -21,4 +22,4 @@ const CustomApp: FC<AppProps> = ({ Component, pageProps }) => {
   );
 };
 
-export default CustomApp;
+export default appWithTranslation(CustomApp);
