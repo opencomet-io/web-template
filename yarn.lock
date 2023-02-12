@@ -246,7 +246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.9.2":
   version: 7.20.13
   resolution: "@babel/runtime@npm:7.20.13"
   dependencies:
@@ -1843,6 +1843,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compute-scroll-into-view@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "compute-scroll-into-view@npm:2.0.4"
+  checksum: f3d1db9276c16af42155b572750514939cd0ab0a0f46498906f6811c5b654c5ff2b3f9bfd65958e57439e000a5e1ae092eb96b9e153d194a73e52ffd2380550c
+  languageName: node
+  linkType: hard
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -2132,6 +2139,21 @@ __metadata:
   dependencies:
     webidl-conversions: ^7.0.0
   checksum: ddbc1268edf33a8ba02ccc596735ede80375ee0cf124b30d2f05df5b464ba78ef4f49889b6391df4a04954e63d42d5631c7fcf8b1c4f12bc531252977a5f13d5
+  languageName: node
+  linkType: hard
+
+"downshift@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "downshift@npm:7.2.0"
+  dependencies:
+    "@babel/runtime": ^7.14.8
+    compute-scroll-into-view: ^2.0.4
+    prop-types: ^15.7.2
+    react-is: ^17.0.2
+    tslib: ^2.3.0
+  peerDependencies:
+    react: ">=16.12.0"
+  checksum: 2e7be5ba8f89a027aa9b442d3977b16b84462589aa1649031e3bc85455274193af8f691fbcc26b6db25d56be294f5db9f159fd46562f7595ac2ea7290171d465
   languageName: node
   linkType: hard
 
@@ -3870,6 +3892,7 @@ __metadata:
     "@vitejs/plugin-react": ^3.1.0
     "@vitest/coverage-c8": ^0.28.4
     "@vitest/ui": ^0.28.4
+    downshift: ^7.2.0
     eslint: 8.33.0
     eslint-config-next: 13.1.6
     eslint-config-prettier: ^8.6.0
@@ -3883,6 +3906,7 @@ __metadata:
     prettier: ^2.8.4
     react: 18.2.0
     react-dom: 18.2.0
+    react-hook-form: ^7.43.1
     react-i18next: ^12.1.5
     react-is: ^18.2.0
     sharp: ^0.31.3
@@ -4818,7 +4842,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -4893,6 +4917,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.43.1":
+  version: 7.43.1
+  resolution: "react-hook-form@npm:7.43.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: a15b672885cf9bb43c6691bf544b3ead59860bb8c6298c7607b8b82952707ec8dd9fd9d1346310abb8696e99319b1f78f6023941d129154815811ee64d750461
+  languageName: node
+  linkType: hard
+
 "react-i18next@npm:^12.1.5":
   version: 12.1.5
   resolution: "react-i18next@npm:12.1.5"
@@ -4918,7 +4951,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^17.0.1":
+"react-is@npm:^17.0.1, react-is@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
@@ -5774,7 +5807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.5.0":
+"tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.5.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1

@@ -26,6 +26,7 @@
   "dependencies": {
     "@mantine/hooks": "^5.10.3",
     "@next/font": "13.1.6",
+    "downshift": "^7.2.0",
     "framer-motion": "^9.0.2",
     "i18next": "^22.4.9",
     "immer": "^9.0.19",
@@ -33,6 +34,7 @@
     "next-i18next": "^13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.1",
     "react-i18next": "^12.1.5",
     "react-is": "^18.2.0",
     "sharp": "^0.31.3",
