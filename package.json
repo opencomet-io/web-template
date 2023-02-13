@@ -42,6 +42,7 @@
     "zustand": "^4.3.3"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -58,6 +59,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "jsdom": "^21.1.0",
     "prettier": "^2.8.4",
+    "svgo": "^3.0.2",
     "typescript": "4.9.5",
     "vite-tsconfig-paths": "^4.0.5",
     "vitest": "^0.28.4"

@@ -12,6 +12,21 @@ const nextConfig = {
   },
   i18n,
   poweredByHeader: false,
+  webpack(config) {
+    config.module.rules.push(svgRule);
+    return config;
+  },
+};
+
+const svgRule = {
+  test: /\.svg$/i,
+  issuer: /\.[jt]sx?$/,
+  use: [
+    {
+      loader: '@svgr/webpack',
+      options: { exportType: 'named', namedExport: 'SVG' },
+    },
+  ],
 };
 
 module.exports = nextConfig;
