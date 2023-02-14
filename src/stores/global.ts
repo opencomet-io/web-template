@@ -6,7 +6,7 @@ import env from 'utils/env';
 const middleware = (s: StateCreator<GlobalState, [], []>) =>
   devtools(s, {
     name: 'Global Store',
-    enabled: env.NODE_ENV !== 'production',
+    enabled: env.DEBUG,
   });
 
 interface GlobalState {}

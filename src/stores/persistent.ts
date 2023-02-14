@@ -11,7 +11,7 @@ const middleware = (s: StateCreator<PersistentState, [], []>) =>
     }),
     {
       name: 'Persistent Store',
-      enabled: env.NODE_ENV !== 'production',
+      enabled: env.DEBUG,
     }
   );
 
