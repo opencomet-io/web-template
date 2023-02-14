@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import * as S from './Layout.styles';
 
