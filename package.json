@@ -14,9 +14,10 @@
   },
   "packageManager": "yarn@3.4.1",
   "scripts": {
-    "postinstall": "husky install",
+    "postinstall": "husky install && yarn partytown-setup",
+    "partytown-setup": "partytown copylib public/~partytown",
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn partytown-setup && next build",
     "start": "next start",
     "lint": "next lint",
     "format:all": "prettier --write .",
@@ -27,6 +28,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.7.5",
     "@mantine/hooks": "^5.10.3",
     "@next/font": "13.1.6",
     "downshift": "^7.2.0",

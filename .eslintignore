@@ -45,3 +45,6 @@ next-env.d.ts
 
 # git
 .git/
+
+# partytown
+/public/~partytown

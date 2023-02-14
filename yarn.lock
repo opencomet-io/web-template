@@ -1422,6 +1422,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@builder.io/partytown@npm:^0.7.5":
+  version: 0.7.5
+  resolution: "@builder.io/partytown@npm:0.7.5"
+  bin:
+    partytown: bin/partytown.cjs
+  checksum: 2b49a6eff5f1016f6b720d02c50d1ee05d91ba55ec2cd565f2b78ff16a06ef6aa1d51a5f66744d5358347e1d57ce02953d78be935e552585cd1c237a8f56c7d3
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^0.8.2":
   version: 0.8.8
   resolution: "@emotion/is-prop-valid@npm:0.8.8"
@@ -5548,6 +5557,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "landing@workspace:."
   dependencies:
+    "@builder.io/partytown": ^0.7.5
     "@faker-js/faker": ^7.6.0
     "@mantine/hooks": ^5.10.3
     "@next/font": 13.1.6
