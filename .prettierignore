@@ -48,3 +48,6 @@ next-env.d.ts
 
 # partytown
 /public/~partytown
+
+# robots.txt
+/public/robots.txt
