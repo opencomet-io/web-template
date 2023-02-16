@@ -1,5 +1,8 @@
 import { FC } from 'react';
 import Head from 'next/head';
+import { Partytown } from '@builder.io/partytown/react';
+
+import env from 'utils/env';
 
 const GlobalHead: FC = () => {
   return (
@@ -11,6 +14,7 @@ const GlobalHead: FC = () => {
       {/* TODO: Add links to page in other languages */}
       {/*<link rel="alternate" hrefLang="en" href="https://example.com" />*/}
       {/*<link rel="alternate" hrefLang="x-default" href="https://example.com" />*/}
+      <Partytown debug={env.DEBUG} forward={[]} />
     </Head>
   );
 };
