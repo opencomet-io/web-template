@@ -48,3 +48,8 @@ next-env.d.ts
 
 # partytown
 /public/~partytown
+
+# service workers
+/public/workbox-*.js
+/public/sw.js
+/public/fallback-*.js

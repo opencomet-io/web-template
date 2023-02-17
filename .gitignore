@@ -54,3 +54,8 @@ next-env.d.ts
 # sitemaps
 /public/robots.txt
 /public/sitemap*.xml
+
+# service workers
+/public/workbox-*.js*
+/public/sw.js*
+/public/fallback-*.js*

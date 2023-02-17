@@ -34,7 +34,7 @@ class CustomDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html dir="ltr">
         <Head />
         <body>
           <Main />

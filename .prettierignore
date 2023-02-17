@@ -51,3 +51,8 @@ next-env.d.ts
 
 # robots.txt
 /public/robots.txt
+
+# service workers
+/public/workbox-*.js
+/public/sw.js
+/public/fallback-*.js

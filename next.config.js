@@ -29,4 +29,10 @@ const svgRule = {
   ],
 };
 
-module.exports = nextConfig;
+// eslint-disable-next-line import/order
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: process.env.ENABLE_PWA !== 'true',
+});
+
+module.exports = withPWA(nextConfig);
