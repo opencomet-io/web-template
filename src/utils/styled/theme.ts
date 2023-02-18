@@ -1,4 +1,6 @@
-const colors = {};
+const colors = {
+  primary: '#fff',
+};
 
 const zIndexes = {
   debug: 9999,
@@ -7,5 +9,4 @@ const zIndexes = {
 const theme = { colors, zIndexes };
 
 export type CustomTheme = typeof theme;
-export { colors, zIndexes };
 export default theme;
