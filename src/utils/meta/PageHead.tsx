@@ -43,7 +43,7 @@ const PageHead: FC<Props> = ({ ...props }) => {
               rel="alternate"
               hrefLang={locale}
               href={env.SITE_URL + `/${locale}` + trailingPathname}
-              key={locale}
+              key={`link-alt-${locale}`}
             />
           )
         )}

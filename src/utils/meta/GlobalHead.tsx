@@ -37,7 +37,11 @@ const GlobalHead: FC = () => {
         locale === router.locale ? (
           []
         ) : (
-          <meta property="og:locale:alternate" content={locale} key={locale} />
+          <meta
+            property="og:locale:alternate"
+            content={locale}
+            key={`og-alt-${locale}`}
+          />
         )
       )}
 
