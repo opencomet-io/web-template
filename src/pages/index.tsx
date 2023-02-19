@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation, SSRConfig } from 'next-i18next';
 
 import PageHead from 'utils/meta/PageHead';
-import env from 'utils/env';
+import { restApi } from 'utils/clients/rest';
 
 export interface Props
   extends InferGetServerSidePropsType<typeof getServerSideProps> {}
@@ -28,8 +28,7 @@ type Data = {
 const getServerSideProps: GetServerSideProps<Data & SSRConfig> = async ({
   locale = 'en',
 }) => {
-  const res = await fetch(env.REST_API_URL + '/ping');
-  const message = await res.text();
+  const message = await restApi.get('/ping').text();
 
   return {
     props: {

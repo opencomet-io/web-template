@@ -6443,6 +6443,7 @@ __metadata:
     ua-parser-js: ^1.0.33
     vite-tsconfig-paths: ^4.0.5
     vitest: ^0.28.4
+    wretch: ^2.4.1
     zustand: ^4.3.3
   languageName: unknown
   linkType: soft
@@ -10069,6 +10070,13 @@ __metadata:
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
   checksum: 159da4805f7e84a3d003d8841557196034155008f817172d4e986bd591f74aa82aa7db55929a54222309e01079a65a92a9e6414da5a6aa4b01ee44a511ac3ee5
+  languageName: node
+  linkType: hard
+
+"wretch@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "wretch@npm:2.4.1"
+  checksum: e2ad1d7a576aaf6d7e8c4af129778e139dc9bc663202922cdd397f270a0c0477bca0074c9b6bfcdd53f757284f356f4daf310df741f1999e82a7dd3c521c2063
   languageName: node
   linkType: hard
 

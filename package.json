@@ -49,6 +49,7 @@
     "sharp": "^0.31.3",
     "styled-components": "^5.3.6",
     "ua-parser-js": "^1.0.33",
+    "wretch": "^2.4.1",
     "zustand": "^4.3.3"
   },
   "devDependencies": {
