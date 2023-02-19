@@ -1,10 +1,5 @@
 import { ReactElement } from 'react';
-import { afterEach } from 'vitest';
-import { cleanup, render } from '@testing-library/react';
-
-afterEach(() => {
-  cleanup();
-});
+import { render } from '@testing-library/react';
 
 const renderWithProviders = (ui: ReactElement, opts = {}) =>
   render(ui, {

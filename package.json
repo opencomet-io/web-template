@@ -14,12 +14,13 @@
   },
   "packageManager": "yarn@3.4.1",
   "scripts": {
-    "postinstall": "husky install && yarn run gen:partytown",
+    "postinstall": "husky install && yarn run gen:msw && yarn run gen:partytown",
+    "gen:msw": "msw init public/ --save",
     "gen:partytown": "partytown copylib public/~partytown",
     "gen:sitemaps": "next-sitemap && prettier --write './public/*.xml'",
-    "build": "yarn run gen:partytown && next build && yarn run gen:sitemaps",
-    "dev": "next dev",
-    "start": "next start",
+    "build": "yarn run gen:partytown && NODE_OPTIONS='--no-experimental-fetch' next build && yarn run gen:sitemaps",
+    "dev": "NODE_OPTIONS='--no-experimental-fetch' next dev",
+    "start": "NODE_OPTIONS='--no-experimental-fetch' next start --keepAliveTimeout=22000",
     "lint": "next lint",
     "format:all": "prettier --write .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
@@ -70,6 +71,7 @@
     "husky": "^8.0.3",
     "jsdom": "^21.1.0",
     "lint-staged": "^13.1.2",
+    "msw": "^1.0.1",
     "next-sitemap": "^3.1.52",
     "prettier": "^2.8.4",
     "svgo": "^3.0.2",
@@ -79,5 +81,8 @@
   },
   "resolutions": {
     "@types/testing-library__jest-dom": "opencomet-io/jest-dom-types"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
