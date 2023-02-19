@@ -5,7 +5,6 @@ const env = {
   REST_API_URL: process.env.REST_API_URL,
   SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   SITE_NAME: process.env.NEXT_PUBLIC_SITE_NAME,
-  ENABLE_PWA: process.env.NEXT_PUBLIC_ENABLE_PWA === 'true',
 };
 
 export default env;
