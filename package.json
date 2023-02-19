@@ -48,6 +48,7 @@
     "react-is": "^18.2.0",
     "sharp": "^0.31.3",
     "styled-components": "^5.3.6",
+    "ua-parser-js": "^1.0.33",
     "zustand": "^4.3.3"
   },
   "devDependencies": {
@@ -61,6 +62,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/styled-components": "^5",
+    "@types/ua-parser-js": "^0.7.36",
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.28.4",
     "@vitest/ui": "^0.28.4",
