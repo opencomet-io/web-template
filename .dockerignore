@@ -50,3 +50,6 @@ next-env.d.ts
 
 # git
 .git
+
+# storybook
+storybook-static

@@ -11,14 +11,17 @@ const nextConfig = {
     styledComponents: true,
   },
   i18n,
-  poweredByHeader: false,
   webpack(config) {
-    config.module.rules.push(svgRule);
+    config.module.rules.push(svgrRule);
     return config;
+  },
+  poweredByHeader: false,
+  eslint: {
+    dirs: ['src'],
   },
 };
 
-const svgRule = {
+const svgrRule = {
   test: /\.svg$/i,
   issuer: /\.[jt]sx?$/,
   use: [

@@ -54,3 +54,7 @@ next-env.d.ts
 /public/workbox-*.js
 /public/sw.js
 /public/fallback-*.js
+
+# storybook
+storybook-static
+!.storybook
