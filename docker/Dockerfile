@@ -7,7 +7,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json yarn.lock* ./
-COPY docker/.yarnrc.yml ./.yarnrc.yml
+COPY docker/.yarnrc.docker.yml ./.yarnrc.yml
 COPY .yarn/releases ./.yarn/releases
 
 RUN yarn install --immutable
