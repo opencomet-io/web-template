@@ -53,3 +53,6 @@ next-env.d.ts
 
 # storybook
 storybook-static
+
+# IDE
+.idea/
