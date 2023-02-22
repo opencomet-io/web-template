@@ -8,8 +8,7 @@ const breakpoints = {
   max: 1680,
 };
 
-const customMediaQuery = (minWidth: number) =>
-  `@media screen and (min-width: ${minWidth}px)`;
+const customMediaQuery = (minWidth: number) => `@media screen and (min-width: ${minWidth}px)`;
 
 const media = {
   xs: customMediaQuery(breakpoints.xs),

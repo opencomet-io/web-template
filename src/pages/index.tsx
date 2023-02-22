@@ -6,8 +6,7 @@ import { useTranslation, SSRConfig } from 'next-i18next';
 import PageHead from 'utils/meta/PageHead';
 import { restApi } from 'utils/clients/rest';
 
-export interface Props
-  extends InferGetServerSidePropsType<typeof getServerSideProps> {}
+export interface Props extends InferGetServerSidePropsType<typeof getServerSideProps> {}
 
 const Landing: FC<Props> = ({ message }) => {
   const { t } = useTranslation('common');
@@ -25,9 +24,7 @@ type Data = {
   message: string;
 };
 
-const getServerSideProps: GetServerSideProps<Data & SSRConfig> = async ({
-  locale = 'en',
-}) => {
+const getServerSideProps: GetServerSideProps<Data & SSRConfig> = async ({ locale = 'en' }) => {
   const message = await restApi.get('/ping').text();
 
   return {

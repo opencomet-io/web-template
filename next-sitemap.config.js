@@ -8,9 +8,7 @@ module.exports = {
   sitemapSize: 7000,
   exclude: ['/server-sitemap.xml'],
   robotsTxtOptions: {
-    additionalSitemaps: [
-      `${process.env.NEXT_PUBLIC_SITE_URL}/server-sitemap.xml`,
-    ],
+    additionalSitemaps: [`${process.env.NEXT_PUBLIC_SITE_URL}/server-sitemap.xml`],
   },
   alternateRefs: i18nextConfig.i18n.locales.flatMap(locale =>
     locale === i18nextConfig.i18n.defaultLocale

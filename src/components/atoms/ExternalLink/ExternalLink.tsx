@@ -8,12 +8,7 @@ export interface Props {
   newTab?: boolean;
 }
 
-const ExternalLink: FC<Props> = ({
-  children,
-  destination,
-  newTab = true,
-  ...props
-}) => {
+const ExternalLink: FC<Props> = ({ children, destination, newTab = true, ...props }) => {
   return (
     <S.Anchor
       href={destination}

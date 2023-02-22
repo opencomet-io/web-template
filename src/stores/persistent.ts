@@ -17,8 +17,6 @@ const middleware = (s: StateCreator<PersistentState, [], []>) =>
 
 interface PersistentState {}
 
-const usePersistentStore = create<PersistentState>()(
-  middleware((set, get) => ({}))
-);
+const usePersistentStore = create<PersistentState>()(middleware((set, get) => ({})));
 
 export default usePersistentStore;

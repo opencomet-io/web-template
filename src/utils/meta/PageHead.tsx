@@ -5,8 +5,7 @@ import { NextSeo, NextSeoProps } from 'next-seo';
 
 import env from 'utils/env';
 
-export interface Props
-  extends Omit<NextSeoProps, 'languageAlternates' | 'canonical'> {
+export interface Props extends Omit<NextSeoProps, 'languageAlternates' | 'canonical'> {
   title: string;
   description: string;
 }
@@ -29,11 +28,7 @@ const PageHead: FC<Props> = ({ ...props }) => {
           hrefLang={router.defaultLocale || 'en'}
           href={env.SITE_URL + trailingPathname}
         />
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href={env.SITE_URL + trailingPathname}
-        />
+        <link rel="alternate" hrefLang="x-default" href={env.SITE_URL + trailingPathname} />
 
         {router.locales?.flatMap(locale =>
           locale === router.defaultLocale ? (

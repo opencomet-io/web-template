@@ -35,9 +35,7 @@ const svgrRule = {
 // eslint-disable-next-line import/order
 const withPWA = require('next-pwa')({
   dest: 'public',
-  disable:
-    process.env.NEXT_PUBLIC_ENABLE_PWA !== 'true' ||
-    process.env.NODE_ENV === 'development',
+  disable: process.env.NEXT_PUBLIC_ENABLE_PWA !== 'true' || process.env.NODE_ENV === 'development',
 });
 
 module.exports = withPWA(nextConfig);

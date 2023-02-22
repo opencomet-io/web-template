@@ -30,9 +30,7 @@ const config: StorybookConfig = {
     buildStoriesJson: true,
   },
   webpackFinal: async config => {
-    const imageRule = config.module?.rules?.find(rule =>
-      (rule.test as RegExp).test('.svg')
-    );
+    const imageRule = config.module?.rules?.find(rule => (rule.test as RegExp).test('.svg'));
     if (!imageRule) return config;
 
     imageRule.exclude = /\.svg$/;
