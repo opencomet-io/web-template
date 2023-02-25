@@ -64,7 +64,7 @@ const config: PlaywrightTestConfig = {
     },
 
     // WebKit is not supported on newer Linux distributions
-    ...(os.platform() !== 'linux'
+    ...(os.platform() !== 'linux' || process.env.CI
       ? [
           {
             name: 'Desktop Safari',
