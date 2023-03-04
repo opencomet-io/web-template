@@ -10,8 +10,6 @@ services:
       - caddy
     labels:
       caddy: localhost
-      caddy.header_0: Cross-Origin-Embedder-Policy require-corp
-      caddy.header_1: Cross-Origin-Opener-Policy same-origin
       caddy.reverse_proxy: '{{upstreams 3001}}'
       caddy.reverse_proxy.transport: http
       caddy.reverse_proxy.transport.keepalive: 20s
