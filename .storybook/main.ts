@@ -19,7 +19,7 @@ const config: StorybookConfig = {
     builder: {
       name: 'webpack5',
       options: {
-        // fsCache: true,
+        fsCache: false,
       },
     },
     disableTelemetry: true,

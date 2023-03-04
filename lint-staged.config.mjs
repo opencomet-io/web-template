@@ -15,8 +15,6 @@ const buildEslintCommand = async files => {
     .join(' --file ')}`;
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   '*.{js,jsx,ts,tsx}': [buildEslintCommand],
-  // '*.{ts,tsx}': () => 'tsc -p tsconfig.json --noEmit',
 };
