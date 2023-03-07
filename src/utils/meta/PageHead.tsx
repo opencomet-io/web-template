@@ -3,8 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { NextSeo, NextSeoProps } from 'next-seo';
 
-import env from 'utils/env';
-
 export interface Props extends Omit<NextSeoProps, 'languageAlternates' | 'canonical'> {
   title: string;
   description: string;
@@ -16,7 +14,7 @@ const PageHead: FC<Props> = ({ ...props }) => {
   const trailingPathname = router.pathname.replace(/^\/$/, '');
 
   const canonical =
-    env.SITE_URL +
+    process.env.NEXT_PUBLIC_SITE_URL +
     (router.locale === router.defaultLocale ? '' : `/${router.locale}`) +
     trailingPathname;
 
@@ -26,9 +24,13 @@ const PageHead: FC<Props> = ({ ...props }) => {
         <link
           rel="alternate"
           hrefLang={router.defaultLocale || 'en'}
-          href={env.SITE_URL + trailingPathname}
+          href={process.env.NEXT_PUBLIC_SITE_URL + trailingPathname}
         />
-        <link rel="alternate" hrefLang="x-default" href={env.SITE_URL + trailingPathname} />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={process.env.NEXT_PUBLIC_SITE_URL + trailingPathname}
+        />
 
         {router.locales?.flatMap(locale =>
           locale === router.defaultLocale ? (
@@ -37,7 +39,7 @@ const PageHead: FC<Props> = ({ ...props }) => {
             <link
               rel="alternate"
               hrefLang={locale}
-              href={env.SITE_URL + `/${locale}` + trailingPathname}
+              href={process.env.NEXT_PUBLIC_SITE_URL + `/${locale}` + trailingPathname}
               key={`link-alt-${locale}`}
             />
           )

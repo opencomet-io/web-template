@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-const ServerError: FC = () => {
+const InternalServerError: FC = () => {
   return (
     <>
       <h1>500</h1>
@@ -9,4 +9,4 @@ const ServerError: FC = () => {
   );
 };
 
-export default ServerError;
+export default InternalServerError;

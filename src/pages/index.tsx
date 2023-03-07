@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation, SSRConfig } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import PageHead from 'utils/meta/PageHead';
 

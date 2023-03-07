@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Partytown } from '@builder.io/partytown/react';
 
-import env from 'utils/env';
+import vars from 'utils/vars';
 import theme from 'utils/styled/theme';
 
 const GlobalHead: FC = () => {
@@ -21,7 +21,7 @@ const GlobalHead: FC = () => {
       <link rel="shortcut icon" href="/favicon.ico" />
 
       {/* PWA */}
-      <meta name="application-name" content={env.SITE_NAME} />
+      <meta name="application-name" content={process.env.NEXT_PUBLIC_SITE_NAME} />
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="theme-color" content={theme.colors.primary} />
@@ -31,7 +31,7 @@ const GlobalHead: FC = () => {
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={env.SITE_NAME} />
+      <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} />
       <meta property="og:locale" content={router.locale} />
       {router.locales?.flatMap(locale =>
         locale === router.locale ? (
@@ -41,7 +41,7 @@ const GlobalHead: FC = () => {
         )
       )}
 
-      <Partytown debug={env.DEBUG} forward={[]} />
+      <Partytown debug={vars.DEBUG} forward={[]} />
     </Head>
   );
 };

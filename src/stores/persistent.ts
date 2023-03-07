@@ -1,7 +1,7 @@
 import { create, StateCreator } from 'zustand';
 import { devtools, persist, createJSONStorage } from 'zustand/middleware';
 
-import env from 'utils/env';
+import vars from 'utils/vars';
 
 const middleware = (s: StateCreator<PersistentState, [], []>) =>
   devtools(
@@ -11,7 +11,7 @@ const middleware = (s: StateCreator<PersistentState, [], []>) =>
     }),
     {
       name: 'Persistent Store',
-      enabled: env.DEBUG,
+      enabled: vars.DEBUG,
     }
   );
 

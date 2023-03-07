@@ -2,18 +2,17 @@ import { createGlobalStyle } from 'styled-components';
 
 import media from 'utils/styled/media';
 
+// Workaround to make Prettier formatting work inside the global style
 const styled = { createGlobalStyle };
 
 const GlobalStyle = styled.createGlobalStyle`
-  ${media.fullMotion} {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+
+    ${media.fullMotion} {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
@@ -58,8 +57,6 @@ const GlobalStyle = styled.createGlobalStyle`
   }
 
   svg {
-    // width: 100%;
-    // height: 100%;
     pointer-events: none;
   }
 
