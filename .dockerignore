@@ -44,6 +44,9 @@ next-env.d.ts
 .eslintcache
 storybook-static/
 
+# Generated development public assets
+/public/mockServiceWorker.js
+
 # Local env files
 .env*.local
 

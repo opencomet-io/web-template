@@ -1,12 +1,12 @@
 {
-  "name": "landing",
+  "name": "web-template",
   "private": true,
   "version": "0.1.0",
   "license": "MPL-2.0",
-  "homepage": "https://opencomet.io",
+  "homepage": "https://github.com/opencomet-io/web-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/opencomet-io/landing"
+    "url": "https://github.com/opencomet-io/web-template"
   },
   "author": {
     "name": "Igor Michalak",
@@ -14,15 +14,16 @@
   },
   "packageManager": "yarn@3.4.1",
   "scripts": {
-    "postinstall": "husky install && yarn run gen:msw && yarn run gen:partytown",
-    "gen:msw": "msw init public/ --save",
-    "gen:partytown": "partytown copylib public/~partytown",
-    "gen:sitemaps": "next-sitemap && prettier --write './public/*.xml'",
-    "build": "yarn run gen:partytown && NODE_OPTIONS='--no-experimental-fetch' next build && yarn run gen:sitemaps",
+    "postinstall": "husky install && yarn run init-msw && yarn run init-partytown",
+    "init-msw": "msw init public/ --save",
+    "init-partytown": "partytown copylib public/~partytown",
+    "generate-sitemaps": "next-sitemap && prettier --write './public/sitemap*.xml'",
+    "build": "NODE_OPTIONS='--no-experimental-fetch' next build && yarn run postbuild",
+    "postbuild": "yarn run init-partytown && yarn run generate-sitemaps",
     "dev": "NODE_OPTIONS='--no-experimental-fetch' NEXT_MANUAL_SIG_HANDLE=true next dev",
     "start": "NODE_OPTIONS='--no-experimental-fetch' NEXT_MANUAL_SIG_HANDLE=true next start --keepAliveTimeout=22000",
     "lint": "next lint",
-    "format:all": "prettier --write .",
+    "format": "prettier --write .",
     "type-check": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -36,6 +37,7 @@
   "dependencies": {
     "@builder.io/partytown": "^0.7.5",
     "@mantine/hooks": "^5.10.3",
+    "@next/env": "^13.2.3",
     "@next/font": "13.1.6",
     "downshift": "^7.2.0",
     "framer-motion": "^9.0.2",
@@ -76,6 +78,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.16",
     "@svgr/webpack": "^6.5.1",
+    "@testing-library/dom": "^9.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",

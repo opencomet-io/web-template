@@ -31,7 +31,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value=".yarnrc.*.yml" />
+                    <option name="path" value=".yarnrc*.yml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>

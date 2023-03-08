@@ -1,5 +1,9 @@
 # See https://git-scm.com/docs/gitignore for more about ignoring files.
 
+# IDE
+/.idea/*.iml
+/.idea/modules.xml
+
 # Dependencies
 node_modules/
 /.pnp
