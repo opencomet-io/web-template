@@ -1,7 +1,7 @@
 version: '3'
 
 env:
-  COMPOSE_FILE: docker/docker-compose.yml
+  COMPOSE_FILE: ./docker/docker-compose.yml
 
 tasks:
   build:prod:

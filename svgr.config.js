@@ -1,5 +1,4 @@
 module.exports = {
-  // icon: '100%',
   dimensions: false,
   expandProps: 'end',
   ref: true,

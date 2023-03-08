@@ -10,6 +10,10 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  webpack(config) {
+    config.module.rules.push(SVGRRule);
+    return config;
+  },
   i18n,
   async headers() {
     return [
@@ -23,17 +27,13 @@ const nextConfig = {
       },
     ];
   },
-  webpack(config) {
-    config.module.rules.push(svgrRule);
-    return config;
-  },
   poweredByHeader: false,
   eslint: {
     dirs: ['src'],
   },
 };
 
-const svgrRule = {
+const SVGRRule = {
   test: /\.svg$/i,
   issuer: /\.[jt]sx?$/,
   use: [

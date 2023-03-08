@@ -34,13 +34,13 @@ const config: StorybookConfig = {
     if (!imageRule) return config;
 
     imageRule.exclude = /\.svg$/;
-    config.module?.rules?.push(svgrRule);
+    config.module?.rules?.push(SVGRRule);
 
     return config;
   },
 };
 
-const svgrRule = {
+const SVGRRule = {
   test: /\.svg$/,
   use: [
     {

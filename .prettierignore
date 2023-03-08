@@ -1,70 +1,57 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://git-scm.com/docs/gitignore for more about ignoring files.
 
-# yarn
+# IDE
+/.idea/
+
+# Git
+/.git/
+
+# Dependencies
+node_modules/
+/.pnp
 .pnp.*
 .yarn/*
 .yarn-integrity
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-/public/mockServiceWorker.js
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# logs
+# Logs
 logs/
-*.log
+*.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# Testing
+coverage/
+test-results/
+playwright-report/
+/playwright/.cache/
 
-# vercel
-.vercel
+# Outputs
+build/
 
-# typescript
+# Next.js
+/.next/
+out/
+
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-# eslint
+# Development tools
 .eslintcache
+storybook-static/
+!.storybook
 
-# git
-.git/
-
-# partytown
+# Generated public assets
+/public/workbox-*.js*
+/public/sw.js*
+/public/fallback-*.js*
+/public/mockServiceWorker.js
 /public/~partytown
 
-# robots.txt
-/public/robots.txt
+# Local env files
+.env*.local
 
-# service workers
-/public/workbox-*.js
-/public/sw.js
-/public/fallback-*.js
-
-# storybook
-storybook-static
-
-# IDE
-.idea/
-
-# Playwright
-/test-results/
-/playwright-report/
-/playwright/.cache/
+# Misc
+.DS_Store
+*.pem
+.vercel

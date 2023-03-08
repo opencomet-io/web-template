@@ -37,6 +37,7 @@
         "newlines-between": "always",
         "warnOnUnassignedImports": true
       }
-    ]
+    ],
+    "import/no-anonymous-default-export": ["off"]
   }
 }
