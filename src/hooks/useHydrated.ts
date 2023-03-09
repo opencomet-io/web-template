@@ -4,7 +4,7 @@ const useHydrated = (): boolean => {
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsHydrated(true);
+    setIsHydrated(typeof window !== 'undefined');
   }, []);
 
   return isHydrated;
