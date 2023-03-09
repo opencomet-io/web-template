@@ -48,6 +48,7 @@ const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
   child-src 'self';
+  worker-src 'self' blob:;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src 'none';
